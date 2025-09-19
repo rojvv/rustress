@@ -126,7 +126,7 @@ async function predict(wordsWithEnding: string | string[], marker: string) {
 }
 
 /** Additional parameters of { @link markStresses }. */
-interface MarkStressesParams {
+export interface MarkStressesParams {
   /**
    * A value between 0 and 1. The higher, the more accurate the results will be, but at the same time less words will be marked. Defaults to 0.75.
    */
@@ -152,6 +152,7 @@ interface MarkStressesParams {
 /**
  * Mark stresses in a text.
  *
+ * @params text Text to mark stresses in.
  * @params params Additional parameters.
  */
 export async function markStresses(

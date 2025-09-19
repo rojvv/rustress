@@ -152,8 +152,8 @@ export interface MarkStressesParams {
 /**
  * Mark stresses in a text.
  *
- * @params text Text to mark stresses in.
- * @params params Additional parameters.
+ * @param text Text to mark stresses in.
+ * @param params Additional parameters.
  */
 export async function markStresses(
   text: string,

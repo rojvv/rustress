@@ -15,7 +15,7 @@ import {
   prepareText,
   tokenize,
 } from "./utils.ts";
-import { InferenceSession, Tensor } from "onnxruntime-web";
+import { InferenceSession, Tensor } from "onnxruntime-web/wasm";
 import { decodeBase64 } from "@std/encoding/base64";
 import { model } from "./model.ts";
 

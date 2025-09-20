@@ -19,12 +19,16 @@ import { InferenceSession, Tensor } from "onnxruntime-web/wasm";
 import { decodeBase64 } from "@std/encoding/base64";
 import { model } from "./model.ts";
 
-const session = await InferenceSession.create(decodeBase64(model), {
-  executionMode: "sequential",
-  interOpNumThreads: 1,
-  intraOpNumThreads: 1,
-  executionProviders: ["cpu"],
-});
+const session = await InferenceSession.create(
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=1989695
+  new Uint8Array(decodeBase64(model)),
+  {
+    executionMode: "sequential",
+    interOpNumThreads: 1,
+    intraOpNumThreads: 1,
+    executionProviders: ["cpu"],
+  },
+);
 
 async function predictWrapper(tensor: Tensor) {
   const output = await session.run(

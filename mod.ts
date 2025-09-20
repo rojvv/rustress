@@ -246,6 +246,7 @@ export async function markStresses(
         } else {
           const stressPosition = stressedWords[0].indexOf(marker);
           if (
+            stressPosition > 0 &&
             !markYo &&
             stressedWords[0][stressPosition - 1].toLowerCase() === "ё"
           ) {

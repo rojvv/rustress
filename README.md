@@ -1,7 +1,7 @@
 # rustress
 
-A pure JavaScript inference-based stress marker for Russian based on the prior
-works [StressRNN](https://github.com/dbklim/StressRNN) and
+JavaScript inference-based stress marker for Russian based on the prior works
+[StressRNN](https://github.com/dbklim/StressRNN) and
 [russtress](https://github.com/MashaPo/russtress).
 
 ## Installation

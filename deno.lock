@@ -1,7 +1,7 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@std/assert@1": "1.0.14",
+    "jsr:@std/assert@^1.0.14": "1.0.14",
     "jsr:@std/encoding@^1.0.10": "1.0.10",
     "jsr:@std/internal@^1.0.10": "1.0.10",
     "npm:onnxruntime-web@^1.22.0": "1.22.0"
@@ -111,7 +111,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@std/assert@1",
+      "jsr:@std/assert@^1.0.14",
       "jsr:@std/encoding@^1.0.10",
       "npm:onnxruntime-web@^1.22.0"
     ]

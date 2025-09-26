@@ -10,6 +10,7 @@ import {
 export function prepareText(text: string) {
   text = text.replaceAll(MARKING_TEXT_RE, " _ ").toLowerCase();
   text = text.replaceAll(CLEANING_TEXT_RE, " ");
+  text = text.replaceAll(/\s/g, " ");
   const words = text.split(" ");
   return words;
 }

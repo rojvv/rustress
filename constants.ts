@@ -7,7 +7,7 @@ export const VOWELS = "аеиоуэюяыёАЕИОУЭЮЯЫЁ";
 export const SEARCH_TWO_VOWELS_RE = new RegExp(`[${VOWELS}].*[${VOWELS}]`);
 
 export const MARKING_TEXT_RE = /[…\:,\.\?!\-\n]/g;
-export const CLEANING_TEXT_RE = /[^а-яё'_\+\s\-]/g;
+export const CLEANING_TEXT_RE = /[^а-яё\u0301'_\+\s\-]/g;
 
 export const DEFAULT_TOKENIZER_CATEGORIES = [
   "0123456789",

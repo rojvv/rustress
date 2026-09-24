@@ -197,7 +197,7 @@ export async function markStresses(
       const withoutEndings = delEndings([word])[0];
       if (isInDict(withoutEndings)) {
         stressedWords.push(putDictStress(withoutEndings, marker));
-      } else {
+      } else if (word.length <= MAX_INPUT_LEN) {
         batchForPredict.push(word);
         stressedWords.push(word);
       }
